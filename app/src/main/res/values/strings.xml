@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ToolbarDemo</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Drawer open</string>
+    <string name="drawer_close">Drawer close</string>
+    <array name="left_drawer_items">
+        <item>unRadio</item>
+        <item>Settings</item>
+    </array>
+    <string name="long_content">High quality global journalism requires investment. Please share this article with others using the link below, do not cut  paste the article. See our TsCs and Copyright Policy for more detail. Email ftsales.support@ft.com to buy additional rights. http://www.ft.com/cms/s/0/dd77ed52-ce5b-11e4-900c-00144feab7de.html#ixzz3UsCgP82y
+
+The US has consistently used its veto on the UN Security Council to protect Israel from resolutions that have been highly critical of its treatment of the Palestinians.
+However, even before the election, many European governments were becoming increasingly frustrated at what they see as Israel’s unwillingness to negotiate over a two-state solution. With the prospects for new talks so poor, US officials have suggested they might consider allowing a UN resolution that sets out parameters for a future Palestinian state.
+</string>
+</resources>
