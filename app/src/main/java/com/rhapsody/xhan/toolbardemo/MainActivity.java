@@ -71,6 +71,14 @@ public class MainActivity extends ActionBarActivity implements OnScrollChangedCa
 				super.onDrawerClosed(drawerView);
 				updateToolbarTransparency(toolbarAlpha);
 			}
+
+			@Override
+			public void onDrawerSlide (View drawerView, float slideOffset) {
+				super.onDrawerSlide(drawerView, slideOffset);
+				float alphaDelta = ((float)(255 - toolbarAlpha)) * slideOffset;
+				int tmpAlpha = Float.valueOf(alphaDelta + toolbarAlpha).intValue();
+				updateToolbarTransparency(tmpAlpha);
+			}
 		};
 		drawerLayout.setDrawerListener(drawerToggle);
 
@@ -132,7 +140,6 @@ public class MainActivity extends ActionBarActivity implements OnScrollChangedCa
 		int dampedScroll = (int) (scrollPosition * damping);
 
 		int offset = mLastDampedScroll - dampedScroll;
-		System.out.println("dampedScroll:" + dampedScroll + ", offset=" + offset);
 		header.offsetTopAndBottom(-offset);
 
 		mLastDampedScroll = dampedScroll;
@@ -144,7 +151,6 @@ public class MainActivity extends ActionBarActivity implements OnScrollChangedCa
 
 	@Override
 	public void onScroll (int l, int scrollPosition) {
-		System.out.println("Header height:" + header.getHeight() + ", scrollPosition:" + scrollPosition);
 		int headerHeight = header.getHeight() - toolbar.getHeight();
 		float ratio = 0;
 		if (scrollPosition > 0 && headerHeight > 0)
